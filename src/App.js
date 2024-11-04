@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import MainPage from "./components/MainPage";
 import SearchPage from "./components/SearchPage";
 import logo from "./assets/svg/logo.jpg"; // 로고 이미지 파일 경로
+import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
             <span className="header-title">맛남의 장</span>
           </div>
           <div className="header-right">
-            <button className="login-button">로그인</button>
+            {/* <button className="login-button">로그인</button> */}
+            <Link to="/login" className="login-button">
+              로그인
+            </Link>
             <button className="material-symbols-outlined">menu</button>
           </div>
         </div>
@@ -37,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>
