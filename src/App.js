@@ -47,7 +47,6 @@ function App() {
             ) : (
               <Link to="/login" className="nav-item">로그인</Link>
             )}
-            <button className="material-symbols-outlined">menu</button>
           </div>
         </div>
 
@@ -61,6 +60,7 @@ function App() {
         {/* Main Content */}
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
         </Routes>
       </div>
