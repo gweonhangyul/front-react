@@ -72,7 +72,7 @@ function SearchPage() {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="search-input"
         />
-        <span class="material-symbols-outlined">search</span>
+        <span className="material-symbols-outlined">search</span>
       </div>
 
       <div className="search-buttons">

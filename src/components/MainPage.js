@@ -25,10 +25,11 @@ function MainPage() {
         {/* 레시피 카드 */}
         <div className="recipe-list">
           {recipes.map((recipe) => (
-            <div key={recipe.id} className="recipe-card">
+            <div key={recipe.id} className="recipe-card" style={{width:"340px", marginBottom : "10px"}}>
               <img
                 src={recipe.imageUrl}
                 alt={recipe.title}
+                style={{height:"300px", width:"300px"}}
                 className="recipe-image"
               />
               <div className="recipe-info">

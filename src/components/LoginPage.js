@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../assets/css/LoginPage.css"; // 스타일 시트 임포트
 
-function LoginPage() {
+function LoginPage({ onLogin }) {
   const [email, setEmail] = useState(""); // 이메일 상태
   const [password, setPassword] = useState(""); // 비밀번호 상태
   const [errorMessage, setErrorMessage] = useState(""); // 오류 메시지 상태
@@ -12,8 +12,7 @@ function LoginPage() {
     // 로그인 처리 (예시로만)
     if (email === "test@example.com" && password === "password") {
       alert("로그인 성공!");
-      // 로그인 성공 후 리디렉션 (원하는 페이지로 수정)
-      window.location.href = "/";
+      onLogin(email); // 로그인 성공 시 이메일 전달
     } else {
       // 로그인 실패 시 오류 메시지 설정
       setErrorMessage("이메일 또는 비밀번호가 올바르지 않습니다.");
